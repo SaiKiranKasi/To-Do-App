@@ -1,0 +1,23 @@
+<div class="mt-3">
+  <div class="card">
+    <div class="card-body">
+      <h5 [ngClass]="{ strike: !todo.active }">{{ todo.title }}</h5>
+      <p [ngClass]="{ strike: !todo.active }">{{ todo.desc }}</p>
+
+      <div class="btn btn-success btn-sm mb-2" (click)="onClick(todo)">
+        Delete
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="todo{{ i }}"
+          checked
+          (click)="onCheckboxClick(todo)"
+          [checked]="!todo.active"
+        />
+        <label class="form-check-label" for="todo{{ i }}">Mark as done.</label>
+      </div>
+    </div>
+  </div>
+</div>

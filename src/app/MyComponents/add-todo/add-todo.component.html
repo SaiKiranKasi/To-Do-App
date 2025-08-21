@@ -1,0 +1,14 @@
+<h3>Add To-Do!</h3>
+
+<form (ngSubmit) = "onSubmit()">
+  <div class="mb-3 mt-3">
+    <label for="title" >To-Do Title : </label>
+    <input type="text" class="form-control" id="title" placeholder="Enter your Task!" name="title" [(ngModel)] = "title">
+  </div>
+  <div class="mb-3">
+    <label for="description">Description : </label>
+    <input type="text" class="form-control" id="desc" placeholder="Describe your Task!" name="desc" [(ngModel)] = "desc">
+  </div>
+
+  <button type="submit" class="btn btn-primary mb-3">Submit</button>
+</form>
